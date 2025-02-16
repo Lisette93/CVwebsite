@@ -165,7 +165,7 @@ section {
 .cards .card {
     list-style: none;
     text-align: center;
-    flex: 1 1 calc(25% - 20px);  /* Fyra kort per rad som standard */
+    flex: 1 1 calc(25% - 20px);  
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
     position: relative;
     overflow: hidden;
@@ -173,7 +173,7 @@ section {
 
 @media (max-width: 768px) {
     .cards .card {
-        flex: 1 1 calc(50% - 10px);  /* Två kort per rad på mobila skärmar */
+        flex: 1 1 calc(50% - 10px);
     }
 }
 
@@ -212,7 +212,7 @@ section {
     width: 100%;
     z-index: 2;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent bakgrund för texten */
+    background-color: rgba(255, 255, 255, 0.5); 
 }
 
 footer {
@@ -257,6 +257,7 @@ footer ul :hover {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
+}
 
     aside {
         grid-area: sidebar;
