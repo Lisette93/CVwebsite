@@ -1,7 +1,7 @@
 *{
     margin:0px;
     padding:0px;
-    font-family: "Times", sans-serif;
+    font-family: "playfair display", sans-serif;
     box-sizing: border-box;
     
 }
@@ -35,7 +35,6 @@ header {
 
 .header-text {
     display:flex;
-    font-family: playfair display, serif;
     font-size: 20px;
     justify-content: space-evenly;
     align-items: center;
@@ -50,13 +49,13 @@ nav ul {
     background-size: cover;
     background-position: center; 
     display:flex;
-    justify-content: space-evenly;
+    justify-content: right;
     list-style: none;
     padding:20px;
 }
 
 nav ul a {
-    font-size: 20px;
+    font-size: 18px;
     color:  rgb(146, 136, 122);
     text-decoration: none;
     background-color:  rgb(241, 235, 227);
@@ -64,6 +63,7 @@ nav ul a {
     margin:10px;
     border-radius: 10px;
     opacity: 0.8;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul a:hover {
@@ -74,6 +74,7 @@ nav ul a:hover {
 .nav-link.active {
     color: white;
     background-color: rgb(167, 157, 144);
+    
 }
 
 aside { 
@@ -136,7 +137,7 @@ main {
     justify-content: center;
     align-items: center;
     color:rgb(146, 136, 122);
-    margin: 8rem;
+    margin: 6rem;
     padding: 1rem;
    
 }
@@ -216,7 +217,7 @@ section {
 
 footer {
     grid-area: footer;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
     background-color:  rgb(241, 235, 227);
@@ -224,7 +225,47 @@ footer {
     padding:10px;
     height:10vh;
     margin-top: auto;
+    
 }
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+footer a {
+    color: rgb(146, 136, 122);
+    text-decoration: none; 
+    
+}
+
+footer ul :hover {
+    color: rgb(228, 199, 163);
+    
+}
+
+@media (max-width: 768px) {
+    .grid-wrapper {
+        grid-template-areas:
+            "header"
+            "nav"
+            "sidebar"
+            "main"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    aside {
+        grid-area: sidebar;
+    }
+
+    main {
+        grid-area: main;
+    }
+
 
 @media (max-width: 768px) {
     .container {
