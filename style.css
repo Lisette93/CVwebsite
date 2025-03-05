@@ -1,13 +1,22 @@
+:root{
+   --main-background-color:  #fcfbf8;
+   --secondary-background-color: rgba(248, 243, 237, 0.801);
+   --shadow-color: #f3f3f3;
+   --text-color: rgb(146, 136, 122);
+   --hover-color: black;
+}
+
+
 *{
     margin:0px;
     padding:0px;
-    font-family: "playfair display", sans-serif;
+    font-family: "Cormorant Garamond", serif;
     box-sizing: border-box;
     
 }
 
 body{
-    background-color: #fdfaf2;
+    background-color: var(--main-background-color);
 }
 
 .grid-wrapper {
@@ -25,61 +34,72 @@ body{
     padding: 10px;    
 }
 
+#woman {
+position: absolute;
+  left:3%;
+  bottom:0px;
+  max-width:4%;
+  height: auto;
+}
+
+.primary-header {
+    padding: 1rem;
+    background: var(--main-background-color);
+    position:sticky;
+    top:0;
+    transition: background-color 500ms;
+}
+
+.primary-header.sticking {
+    background-color: var(--secondary-background-color);
+}
+
+
+
 header {
     grid-area:header;
-    color: rgb(146, 136, 122);
+    color: var(--text-color);
     font-size:20px;
     text-align: center;
     padding: 2px;
+    box-shadow: 10px 0px 10px var(--shadow-color);
 }
 
-.header-text {
-    display:flex;
-    font-size: 20px;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#cv{
-    font-size: 50px;
-}
 
 nav ul {
-    background-image: url("/images/leaves-8552657_1280.jpg");
     background-size: cover;
     background-position: center; 
     display:flex;
     justify-content: right;
     list-style: none;
-    padding:20px;
+    padding:10px;
 }
 
 nav ul a {
     font-size: 18px;
-    color:  rgb(146, 136, 122);
+    color: var(--text-color);
     text-decoration: none;
-    background-color:  rgb(241, 235, 227);
     padding:5px;
     margin:10px;
-    border-radius: 10px;
     opacity: 0.8;
     transition: color 0.3s ease-in-out;
 }
 
 nav ul a:hover {
-    color: white;
-    background-color: rgb(228, 199, 163);
+    cursor: pointer;
+    text-decoration:underline;
+    color: var(--hover-color);
+    opacity: 1px; 
 }
 
 .nav-link.active {
-    color: white;
-    background-color: rgb(167, 157, 144);
+    text-decoration: underline double;
     
 }
 
 aside { 
     grid-area: sidebar;
-    background-color: #fdfaf2;
+    background-color: #fcfbf8;
     padding:10px;
     display:flex;
     justify-content: space-evenly; 
@@ -100,29 +120,50 @@ aside {
 
 button {
     
-    background-color: rgb(241, 235, 227);
+    background-color: var(--secondary-background-color);
     padding: 20px;
     padding-left: 40px;
     padding-right: 40px;
     color:  rgb(146, 136, 122);
-    border: 3px solid  rgb(146, 136, 122);
+    border: 1px solid  rgb(146, 136, 122);
     border-radius: 5px;
     
 }
 
 button:hover {
-    background-color: rgb(228, 199, 163);
-    border: 3px solid white;
-    color: white;
+    color: var(--hover-color);
+    border: 1px solid black;
+    cursor: pointer;
+    text-decoration: underline;
     transform: scale(1.1);
     transition: transform 0.2s;
 
 }
 
+#cvContainer {
+    display: block; /* Gör så att allt innehåll är på rad */
+    width: 100%; /* Sätter bredden till 100% */
+    margin-top: 20px; /* Lägger till avstånd från andra element */
+}
+
+.cv-item {
+    display: block; /* Varje CV-item ska ligga under varandra */
+    margin: 10px 0; /* Lägg mellanrum mellan objekten */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    display: block; /* Gör så att rubriker tar upp hela raden */
+    margin-bottom: 10px; /* Avstånd mellan rubrik och innehåll */
+    color: #444;
+}
 main {
     grid-area: main;
     text-align: center;
-    background-color: rgb(241, 235, 227);
+    background-color: var(--secondary-background-color);
     padding:10px;
     margin-right:35px;
     margin-top:20px;
@@ -139,6 +180,7 @@ main {
     color:rgb(146, 136, 122);
     margin: 6rem;
     padding: 1rem;
+    gap:10px;
    
 }
 
@@ -217,10 +259,7 @@ section {
 
 footer {
     grid-area: footer;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color:  rgb(241, 235, 227);
+    background-color:  var(--main-background-color);
     color: rgb(146, 136, 122);
     padding:10px;
     height:10vh;
@@ -229,8 +268,13 @@ footer {
 }
 
 footer ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
     list-style: none;
-    padding: 0;
+    padding: 20px 10px 10px 10px;
+    margin:10px;
+    gap:10px;
 }
 
 
@@ -258,14 +302,6 @@ footer ul :hover {
         grid-template-rows: auto;
     }
 }
-
-    aside {
-        grid-area: sidebar;
-    }
-
-    main {
-        grid-area: main;
-    }
 
 
 @media (max-width: 768px) {

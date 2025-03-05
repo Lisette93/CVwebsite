@@ -1,0 +1,39 @@
+[
+    {
+    "type": "work",
+    "duration":"2019-2023",
+    "title":"Hudterapeut, Sund Hudvård, Helsingborg",
+    "description":"Utför diverse skönhetsbehandlingar. En stor del av arbetet läggs på att jobba med kundbemötande, kundens upplevelse och att skapa långsiktiga och återkommande kundrelationer. "
+    },
+    {
+        "type": "work",
+        "duration":"2018-2019",
+        "title":"Hudterapeut ansvarig, Estetikcentrum, Malmö ",
+        "description":"Startade upp hudterapeutavdelningen på en plastikklinik och var ansvarig för personal och resultat från avdelningen. "
+    },
+    {
+        "type": "work",
+        "duration":"2016-2018",
+        "title":"Hud- & Spa terapeut, Kurhotell Skodsborg, Skodsborg, Danmark",
+        "description":"Dagliga arbetsuppgifter var ansikts- och kroppsbehandlingar, massage, samt produktförsäljning. En viktig del i arbetet var att sprida lugn, värna om kunden och skapa en betydelsefull upplevelse."
+    },
+    {
+        "type": "work",
+        "duration":"2012-2016",
+        "title":"Butiksäljare och kassabiträde, Lager 157, Höganäs",
+        "description":"Dagliga arbetsuppgifter var bland annat att hålla ordning i butiken, fylla på lager och butik, försäljning, god kundservice, stå i kassa, ta emot reklamationer etc. "
+    },
+    {   "type": "education",
+        "duration":"2025-2027",
+        "title":"FrontEndutvecklare - React",
+        "description": "Som frontend-utvecklare lär vi oss en rad viktiga färdigheter och tekniker för att skapa och utveckla användarvänliga och interaktiva webbgränssnitt. Tillexempel: HTML, CSS och JavaScript, Responsiv webbdesign, Ramverk och bibliotek, UX-design och Backend-integration."
+
+    },
+    {
+        "type": "education",
+        "duration":"2015-2016",
+        "title":"Hudterapeut utbildning, CIDESCO kosmetologskolen Köpenhamn",
+        "description": "Utbildning för att bli diplomerad hudterapeut. Förutom hantverksteknik så läste jag kurser som mikrobiologi, fysik och anatomi. Jag hade också 6 månaders praktik på ett SPA-hotell på Mallorca."
+    }
+
+]
