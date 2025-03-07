@@ -1,7 +1,6 @@
-console.log("detta funkar");
 
-//göra nav sticky
 
+//Making the navbar stay when the page is being scrolled
 const primaryHeader = document.querySelector('.primary-header');
 const scrollWatcher = document.createElement('div');
 
@@ -19,7 +18,7 @@ navObserver.observe(scrollWatcher);
 
 
 
-
+//Hämta JSON FIL
 const cvContainer = document.querySelector("#cvContainer");
 
 async function getCVData () {

@@ -1,6 +1,6 @@
 :root{
    --main-background-color:  #fcfbf8;
-   --secondary-background-color: rgba(248, 243, 237, 0.801);
+    --secondary-background-color: rgba(248, 243, 237, 0.801);
    --shadow-color: #f3f3f3;
    --text-color: rgb(146, 136, 122);
    --hover-color: black;
@@ -103,9 +103,7 @@ aside {
     padding:10px;
     display:flex;
     justify-content: space-evenly; 
-    align-items: center; 
-    
-    
+    align-items: center;  
 }
 
 .image {
@@ -285,7 +283,7 @@ footer a {
 }
 
 footer ul :hover {
-    color: rgb(228, 199, 163);
+    color: var(--hover-color);
     
 }
 

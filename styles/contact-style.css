@@ -1,0 +1,253 @@
+
+:root{
+    --main-background-color:  #fcfbf8;
+    --secondary-background-color: rgba(248, 243, 237, 0.801);
+    --shadow-color: #f3f3f3;
+    --text-color: rgb(146, 136, 122);
+    --hover-color: black;
+ }
+ 
+ 
+ *{
+     margin:0px;
+     padding:0px;
+     font-family: "Cormorant Garamond", serif;
+     box-sizing: border-box;
+     
+ }
+ 
+
+
+ body{
+     background-color: var(--main-background-color);
+ }
+ 
+ .grid-wrapper {
+     display:grid;
+     grid-template-areas:
+                 "header header"
+                 "nav nav"
+                 "sidebar main"
+                 "section section"
+                 "footer footer";
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: auto auto 1.5fr 1fr auto;    
+     min-height:100vh;
+     gap: 10px;
+     padding: 10px;    
+ }
+ 
+ #woman {
+ position: absolute;
+   left:3%;
+   bottom:0px;
+   max-width:4%;
+   height: auto;
+ }
+ 
+ .primary-header {
+     padding: 1rem;
+     background: var(--main-background-color);
+     position:sticky;
+     top:0;
+     transition: background-color 500ms;
+ }
+ 
+ .primary-header.sticking {
+     background-color: var(--secondary-background-color);
+ }
+ 
+ 
+ 
+ header {
+     grid-area:header;
+     color: var(--text-color);
+     font-size:20px;
+     text-align: center;
+     padding: 2px;
+     box-shadow: 10px 0px 10px var(--shadow-color);
+ }
+ 
+ 
+ nav ul {
+     background-size: cover;
+     background-position: center; 
+     display:flex;
+     justify-content: right;
+     list-style: none;
+     padding:10px;
+ }
+ 
+ nav ul a {
+     font-size: 18px;
+     color: var(--text-color);
+     text-decoration: none;
+     padding:5px;
+     margin:10px;
+     opacity: 0.8;
+     transition: color 0.3s ease-in-out;
+ }
+ 
+ nav ul a:hover {
+     cursor: pointer;
+     text-decoration:underline;
+     color: var(--hover-color);
+     opacity: 1px; 
+ }
+ 
+ .nav-link.active {
+     text-decoration: underline double;
+     
+ }
+ 
+ aside { 
+     grid-area: sidebar;
+     background-color: var(--main-background-color);
+     padding:10px;
+     display:flex;
+     justify-content: space-evenly; 
+     align-items: center; 
+     
+     
+ }
+ main {
+    grid-area: main;
+    text-align: center;
+    background-color: var(--secondary-background-color);
+    padding:10px;
+    margin-right:35px;
+    margin-top:20px;
+   margin-bottom: 35px ;
+    
+}
+
+
+.main-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(146, 136, 122);
+    margin: 6rem;
+    padding: 1rem;
+    gap:10px;
+   
+}
+
+
+section {
+    grid-area: section;
+    background-image: url("/images/leaves-8552657_1280.jpg");
+    background-size: cover;
+    background-position: center; 
+    padding:10px;
+    width: 100%; 
+    height: auto; 
+}
+
+ #MainContact {
+    background-color: var(--secondary-background-color);
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+
+
+
+#open, #close {
+    background-color: var(--main-background-color);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: var(--text-color);
+    font-size: 14px;
+    padding: 10px 25px;
+    margin-top: 20px;
+}
+
+.modal-container {
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    opacity:0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity:1;
+}
+
+.modal {
+    background-color: white;
+    padding:80px 40px;
+    border-radius: 5px;
+    height: 50vh;
+    width:600px;
+    max-width:100%;
+    text-align: center;
+    line-height: 2;
+}
+
+footer {
+    grid-area: footer;
+    background-color:  var(--main-background-color);
+    color: rgb(146, 136, 122);
+    padding:10px;
+    height:10vh;
+    margin-top: auto;
+    
+}
+
+footer ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 10px 10px 10px;
+    margin:10px;
+    gap:10px;
+}
+
+
+footer a {
+    color: rgb(146, 136, 122);
+    text-decoration: none; 
+    
+}
+
+footer ul :hover {
+    color: rgb(228, 199, 163);
+    
+}
+
+@media (max-width: 768px) {
+    .grid-wrapper {
+        grid-template-areas:
+            "header"
+            "nav"
+            "sidebar"
+            "main"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;   
+    }
+}

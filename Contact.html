@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="/styles/contact-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
     crossorigin="anonymous"
     referrerpolicy="no-referrer" />
     <title>Kontakt</title>
 </head>
+
 <body>
     
     
-<div class="grid-wrapper">  
+<body class="grid-wrapper">  
     <!--Header-->
 <header class="primary-header">
     <span> <img src="images/programmer-4431280_1280.webp" id="woman" alt="woman"></span>
@@ -32,12 +34,34 @@
     
     <!--Aside-->
     <aside>
-        <h3>Kontakta mig</h3>
+        <h3>Mina kontaktuppgifter</h3>
       <p><i class="fas fa-envelope"></i>  Email: lisettestorm@hotmail.com
         <br><i class="fa-solid fa-phone"></i>  Telefon: 0737 82 58 76
         <br><i class="fa-solid fa-address-book"></i> Adress: Helsingborg
       </p>
     </aside>
+  
+ 
+    <main id="MainContact">
+        <button id="open">
+           Kontakta mig!
+        </button>
+
+        <div class="modal-container" id="modalContainer">
+            <div class="modal">
+                
+                <h3>Mina kontaktuppgifter</h3>
+                <p><i class="fas fa-envelope"></i>  Email: lisettestorm@hotmail.com
+                  <br><i class="fa-solid fa-phone"></i>  Telefon: 0737 82 58 76
+                  <br><i class="fa-solid fa-address-book"></i> Adress: Helsingborg
+                </p>
+            <button id="close">
+                Close me
+            </button>
+            </div>
+        </div>
+    
+    </main>
 
 
     <!--section-->
@@ -53,7 +77,8 @@
             <li><i class="fab fa-github"></i><a href="https://github.com/Lisette93" target="_blank"></a></li>
         </ul>   
     </footer>
-    
-<script src="script.js"></script>
+  
+<script src="Contact-script.js">
+ </script>
 </body>
 </html>
