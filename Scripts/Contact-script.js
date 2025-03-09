@@ -1,5 +1,6 @@
 
-//Inspiration from a youtube video
+//Function to open and close a modal
+//Inspiration from youtube video
 document.addEventListener('DOMContentLoaded', () => {
 const open = document.getElementById('open');
 const modalContainer = document.getElementById('modalContainer');
