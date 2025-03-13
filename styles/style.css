@@ -89,7 +89,6 @@ nav ul a:hover {
     cursor: pointer;
     text-decoration:underline;
     color: var(--hover-color);
-    opacity: 1px; 
 }
 
 .nav-link.active {
@@ -116,7 +115,7 @@ aside {
 
 }
 
-button {
+.download-btn {
     
     background-color: var(--secondary-background-color);
     padding: 20px;
@@ -128,7 +127,7 @@ button {
     
 }
 
-button:hover {
+.download-btn:hover {
     color: var(--hover-color);
     border: 1px solid black;
     cursor: pointer;
